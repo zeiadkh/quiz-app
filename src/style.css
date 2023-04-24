@@ -1,0 +1,127 @@
+
+body {
+    font-family: 'Karla';
+    background: #F5F7FB;
+    margin: 0;
+ }
+ header{
+    
+    text-align: center;
+    color: #293264;
+    height: 100vh;
+    position: relative;
+    
+ }
+ .text{
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+ }
+ svg{
+     position: fixed;
+     top: -12px;
+     right: -15%;
+     width: 55vw;
+ }
+ header h1{
+     margin-bottom: 12px;
+     display: block;
+     width: 100%;
+ }
+ header p{
+     margin: 0;
+     display: block;
+     width: 100%;
+ }
+.container svg:nth-of-type(2){
+     position: fixed;
+     left: -18%;
+     top: 85%;
+     
+ }
+  button{
+    
+    background: #4D5B9E;
+    border-radius: 15px;
+    padding: 15px 60px;
+    color: white;
+    border: none; 
+    margin-top: 20px;  
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+ }
+
+
+ .block{
+    position: relative;
+    z-index: 2;
+    margin: 20px;
+    color: #293264;
+    border-bottom: 1px solid #DBDEF0;
+
+}
+.ques{
+    font-weight: 700;
+    font-size: 1.5rem;
+    max-width: 70vw;
+    margin: 0 auto;
+
+ }
+ .answers{
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    font-size: 1rem;
+    margin-left: -50px;
+    font-weight: 400;
+    flex-wrap: wrap;
+
+ }
+ .answers li{
+     border: .8px solid #4D5B9E;
+     border-radius: 8px;
+     padding: 4px 20px;
+     margin: 12px;
+     margin-bottom: 20px;
+     cursor: pointer;
+ }
+.check{
+    position: relative;
+    z-index: 3;
+    margin: 20px auto;
+    display: block;
+}
+
+.clicked{
+    background-color: #D6DBF5;
+    border: none !important ;
+}
+.correct{
+    background-color: #94D7A2;
+    border: none !important;
+}
+.wrong{
+    background-color: #F8BCBC;
+    border: none;
+}
+.end{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.play-again{
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px 40px;
+    
+    /* display: inline-block; */
+}
+.none{
+    display: none  !important;
+}
+.flex{
+    display: flex !important;
+}
