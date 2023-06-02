@@ -12,9 +12,8 @@ export default function App(){
         setClk(!clk)
         return clk
     }
-
     
-    // console.log(handleStart())
+    
     return (
         <div className="container">
             <svg width="158" height="141" viewBox="0 0 158 141" fill="none" xmlns="http://www.w3.org/2000/svg">

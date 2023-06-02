@@ -26,12 +26,13 @@ export default function Questions(props){
 
         return (
             <li 
-             id = {props.id} onClick={() => choosing(props.id)} > {props.li}</li>
+             id = {props.id} onClick={() => choosing(props.id)} > {props.li}
+            </li>
         )
     }
    
 
-    function End(props){
+    function End(){
        
         function click(){
             setChecked(!checked)
@@ -53,8 +54,15 @@ export default function Questions(props){
             setData(json.results)
             setT(await json.results.map(item => shuffleArray([item.correct_answer,...item.incorrect_answers]))
             .map(li => li.map(ans => {return {value:ans, id: nanoid()}})))
-            
+
+            const headerHeight = document.querySelector("header").offsetHeight; 
+            window.scrollTo({
+            top: headerHeight,
+            behavior: "smooth",
+            });
+    
         }
+        
         
         fetchData()
         
@@ -74,6 +82,8 @@ export default function Questions(props){
             `${li.textContent.toString().trim()}` === `${ans}`?  li.classList.add("correct"):
             li.classList.contains("clicked")? li.classList.toggle("wrong") : li.classList.remove("wrong")))
     }
+
+    
     return(
         <div className="questions">
             <div className="ques">                              
@@ -83,9 +93,9 @@ export default function Questions(props){
                      
                     return(
                         
-                        <div className="block">
-                            <div className="ques">{item.question}</div>
-                            <div className="ans">
+                        <div className="block" key={index}>
+                            <div className="ques" key={index+1}>{item.question}</div>
+                            <div className="ans" key={index+2}>
                                 
                                 <ul className="answers">
                                     {
